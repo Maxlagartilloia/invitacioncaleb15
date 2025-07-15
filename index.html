@@ -30,7 +30,7 @@
             box-sizing: border-box;
         }
 
-        /* Reduced luminosity for neon effects */
+        /* eliminate luminosity for neon effects */
         .neon-text {
             text-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 8px #0ff; /* Valores reducidos */
         }
@@ -241,7 +241,7 @@
                     Este detalle es para ti :)
                   </p>
                   <p className="text-2xl md:text-4xl font-semibold text-white leading-relaxed max-w-4xl animate-slideUp delay-1s neon-text">
-                    Prepárate para ser testigo de un momento mágico, la celebración de los quince años de mi hijo Cristian Caleb. Un hito que marca el inicio de una nueva etapa, y tu presencia es un regalo inestimable que atesoramos en lo más profundo de nuestro corazón. ¡Tu alegría es parte fundamental de su historia!
+                    El viernes 25 de julio de 2025 nuestro crack favorito —pelotero imparable, mente brillante y campeón absoluto de hacernos reír— cumple 15 gloriosos años. Sus orgullosísimos padres, Criss y Gaby, ya no cabemos de emoción (ni en la camiseta talla XL que Cristian usa con estilo 😅) y queremos celebrarlo por todo lo alto.
                   </p>
                   <button
                     onClick={handleEnterClick}
@@ -339,33 +339,6 @@
                     </p>
                   </section>
 
-                  {/* RSVP Section - Google Form Embed */}
-                  <section className="mb-16 bg-gray-800 p-8 rounded-xl shadow-xl border border-blue-700 animate-slideInUp">
-                    <h3 className="text-3xl md:text-4xl font-semibold text-blue-400 mb-6 neon-text">
-                      Confirma tu Asistencia (RSVP)
-                    </h3>
-                    <p className="text-lg text-gray-300 mb-6">
-                      Por favor, ayúdanos a planificar este día tan importante confirmando tu asistencia antes del <span className="font-semibold text-cyan-300">15 de julio del 2025</span>.
-                    </p>
-                    <div className="w-full max-w-full overflow-hidden rounded-lg shadow-lg" style={{backgroundColor: '#1a202c'}}> {/* Contenedor con fondo oscuro */}
-                      <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSd9NlyAz8PZffB1SAozcF-35tODMd0-cMv0pcRyXBUcfmkHcQ/viewform?embedded=true"
-                        width="100%"
-                        height="1052"
-                        frameBorder="0"
-                        marginHeight="0"
-                        marginWidth="0"
-                        className="rounded-lg"
-                        style={{backgroundColor: 'transparent'}} /* Intento de hacer el fondo del iframe transparente */
-                      >
-                        Cargando…
-                      </iframe>
-                    </div>
-                    <p className="text-center text-gray-400 text-sm mt-6">
-                      Para cualquier duda, por favor contáctanos.
-                    </p>
-                  </section>
-
                   {/* Gift Suggestions Section */}
                   <section className="mb-16 bg-gray-800 p-8 rounded-xl shadow-xl border border-purple-700 animate-slideInLeft">
                     <h3 className="text-3xl md:text-4xl font-semibold text-purple-400 mb-6 neon-text">
@@ -430,16 +403,46 @@
                       Un Mensaje Especial
                     </h3>
                     <p className="text-xl text-gray-300 leading-relaxed italic">
-                      "Queridos amigos y familiares,
-                      Estamos increíblemente emocionados de celebrar los quince años de nuestro amado hijo, Cristian Caleb. Ha sido un viaje maravilloso verlo crecer y convertirse en el joven extraordinario que es hoy. Su alegría, su espíritu y su amor iluminan nuestras vidas cada día.
-                      Esperamos compartir este momento tan significativo con todos ustedes y crear recuerdos inolvidables juntos. ¡Gracias por ser parte de su historia y por acompañarnos en este día tan especial!"
+                      Estimados familiares y amigos:
+Nos llena de profunda alegría y gratitud invitarles a la celebración del décimo quinto cumpleaños de nuestro amado hijo, Cristian Caleb Lombeida Garzón. Ha sido un privilegio acompañar su crecimiento y verlo convertirse en el joven excepcional que es hoy—un muchacho cuya inteligencia, energía y calidez iluminan nuestra vida cada día.
+Deseamos compartir este hito tan significativo con quienes han sido testigos y parte esencial de su historia. Su presencia hará de esta ocasión un recuerdo imborrable para Cristian y para toda nuestra familia.
+Gracias, de corazón, por el cariño, la guía y el apoyo que siempre nos han brindado. Esperamos contar con su compañía para celebrar juntos este momento tan especial.
+Con sincero agradecimiento,
+Criss & Gaby
                     </p>
                     <p className="text-right text-gray-400 mt-4 text-lg font-semibold">
                       Con cariño, <br />
                       La Familia Lombeida Garzón
                     </p>
                   </section>
-
+                    
+{/* RSVP Section - Google Form Embed */}
+                  <section className="mb-16 bg-gray-800 p-8 rounded-xl shadow-xl border border-blue-700 animate-slideInUp">
+                    <h3 className="text-3xl md:text-4xl font-semibold text-blue-400 mb-6 neon-text">
+                      Confirma tu Asistencia (RSVP)
+                    </h3>
+                    <p className="text-lg text-gray-300 mb-6">
+                      Por favor, ayúdanos a planificar este día tan importante confirmando tu asistencia antes del <span className="font-semibold text-cyan-300">15 de julio del 2025</span>.
+                    </p>
+                    <div className="w-full max-w-full overflow-hidden rounded-lg shadow-lg" style={{backgroundColor: '#1a202c'}}> {/* Contenedor con fondo oscuro */}
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSd9NlyAz8PZffB1SAozcF-35tODMd0-cMv0pcRyXBUcfmkHcQ/viewform?embedded=true"
+                        width="100%"
+                        height="1052"
+                        frameBorder="0"
+                        marginHeight="0"
+                        marginWidth="0"
+                        className="rounded-lg"
+                        style={{backgroundColor: 'transparent'}} /* Intento de hacer el fondo del iframe transparente */
+                      >
+                        Cargando…
+                      </iframe>
+                    </div>
+                    <p className="text-center text-gray-400 text-sm mt-6">
+                      Para cualquier duda, por favor contáctanos.
+                    </p>
+                  </section>
+                    
                   {/* Footer */}
                   <footer className="text-center text-gray-500 text-sm mt-16">
                     <p>&copy; 2025 Los Quince Años de Cristian Caleb. Todos los derechos reservados.</p>
