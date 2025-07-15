@@ -223,13 +223,13 @@
           // Personaliza estas URLs con las fotos de tu hijo
           // Las rutas son relativas a la raíz de tu proyecto en GitHub.
           const userPhotos = [
-  "foto1.jpeg",
-  "foto2.jpeg",
-  "foto3.jpeg",
-  "foto4.jpeg",
-  "foto5.jpeg",
-  "foto6.jpeg"
-];
+            "images/foto1.jpeg",
+            "images/foto2.jpeg",
+            "images/foto3.jpeg",
+            "images/foto4.jpeg",
+            "images/foto5.jpeg",
+            "images/foto6.jpeg"
+          ];
 
           return (
             <div className="min-h-screen bg-gray-950 text-white font-inter antialiased flex flex-col items-center justify-center overflow-x-hidden">
@@ -386,11 +386,11 @@
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                       {/* Las fotos de usuario irán aquí. Reemplaza las URLs de marcador de posición en el array userPhotos de arriba con tus URLs de imagen reales. */}
                       {userPhotos.map((imageUrl, index) => (
-                        <div key={index} className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div key={index} className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex items-center justify-center">
                           <img
-                            src={imageUrl}
+                            src={`images/${imageUrl}`} /* Se asume que las imágenes están en la carpeta 'images/' */
                             alt={`Cristian Caleb ${index + 1}`}
-                            className="w-full h-48 object-cover rounded-lg"
+                            className="w-full h-48 object-contain rounded-lg" /* Altura original h-48, object-contain para ajustar */
                             loading="lazy" /* Carga perezosa para imágenes */
                             onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x300/1a202c/a0aec0?text=Error+Carga'; }} /* Fallback para imágenes rotas */
                           />
@@ -451,3 +451,8 @@
             </div>
           );
         };
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+</html>
