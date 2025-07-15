@@ -222,14 +222,14 @@
 
           // Personaliza estas URLs con las fotos de tu hijo
           // Visita la sección "Guía de Personalización" para instrucciones.
-     const userPhotos = [
-  "images/foto1.jpeg",
-  "images/foto2.jpeg",
-  "images/foto3.jpeg",
-  "images/foto4.jpeg",
-  "images/foto5.jpeg",
-  "images/foto6.jpeg",
-];
+          const userPhotos = [
+            "https://placehold.co/400x300/1a202c/a0aec0?text=Foto+Cristian+1",
+            "https://placehold.co/400x300/1a202c/a0aec0?text=Foto+Cristian+2",
+            "https://placehold.co/400x300/1a202c/a0aec0?text=Foto+Cristian+3",
+            "https://placehold.co/400x300/1a202c/a0aec0?text=Foto+Cristian+4",
+            "https://placehold.co/400x300/1a202c/a0aec0?text=Foto+Cristian+5",
+            "https://placehold.co/400x300/1a202c/a0aec0?text=Foto+Cristian+6",
+          ];
 
           return (
             <div className="min-h-screen bg-gray-950 text-white font-inter antialiased flex flex-col items-center justify-center overflow-x-hidden">
@@ -341,7 +341,7 @@
                     </p>
                   </section>
 
-                  {/* RSVP Section */}
+                  {/* RSVP Section - Google Form Embed */}
                   <section className="mb-16 bg-gray-800 p-8 rounded-xl shadow-xl border border-blue-700 animate-slideInUp">
                     <h3 className="text-3xl md:text-4xl font-semibold text-blue-400 mb-6 neon-text">
                       Confirma tu Asistencia (RSVP)
@@ -349,41 +349,20 @@
                     <p className="text-lg text-gray-300 mb-6">
                       Por favor, ayúdanos a planificar este día tan importante confirmando tu asistencia antes del <span className="font-semibold text-cyan-300">15 de julio del 2025</span>.
                     </p>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9NlyAz8PZffB1SAozcF-35tODMd0-cMv0pcRyXBUcfmkHcQ/viewform?embedded=true" width="640" height="1052" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe> {/* Replace 'yourformid' with your actual Formspree form ID */}
-                      <div>
-                        <label htmlFor="name" className="block text-gray-400 text-sm font-bold mb-2">
-                          Nombre Completo:
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          className="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-900 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-                          placeholder="Tu nombre completo"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="companions" className="block text-gray-400 text-sm font-bold mb-2">
-                          Número de Acompañantes:
-                        </label>
-                        <input
-                          type="number"
-                          id="companions"
-                          name="companions"
-                          min="0"
-                          className="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-900 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-                          placeholder="Ej: 1"
-                          required
-                        />
-                      </div>
-                      <button
-                        type="submit"
-                        className="w-full bg-gradient-to-r from-purple-600 to-blue-700 hover:from-purple-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500/50"
+                    <div className="w-full max-w-full overflow-hidden rounded-lg shadow-lg" style={{backgroundColor: '#1a202c'}}> {/* Contenedor con fondo oscuro */}
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSd9NlyAz8PZffB1SAozcF-35tODMd0-cMv0pcRyXBUcfmkHcQ/viewform?embedded=true"
+                        width="100%"
+                        height="1052"
+                        frameBorder="0"
+                        marginHeight="0"
+                        marginWidth="0"
+                        className="rounded-lg"
+                        style={{backgroundColor: 'transparent'}} /* Intento de hacer el fondo del iframe transparente */
                       >
-                        Confirmar Asistencia
-                      </button>
-                    </form>
+                        Cargando…
+                      </iframe>
+                    </div>
                     <p className="text-center text-gray-400 text-sm mt-6">
                       Para cualquier duda, por favor contáctanos.
                     </p>
@@ -477,12 +456,3 @@
     </script>
 </body>
 </html>
-<style>
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 12px;
-  }
-</style>
