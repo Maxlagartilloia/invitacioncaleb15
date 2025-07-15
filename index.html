@@ -451,13 +451,3 @@
             </div>
           );
         };
-<img
-  src={imageUrl}
-  alt={`Cristian Caleb ${index + 1}`}
-  className="w-full h-48 object-contain rounded-lg mx-auto"
-  loading="lazy"
-  onError={(e) => {
-    e.target.onerror = null;
-    e.target.src = 'https://placehold.co/400x300/1a202c/a0aec0?text=Error+Carga';
-  }}
-/>
