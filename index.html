@@ -452,128 +452,34 @@ Criss & Gaby
             </div>
           );
         };
+<style>
+  .futbol-fondo {
+    background-color: #3e8e41; /* Verde césped */
+    background-image: repeating-linear-gradient(
+      45deg,
+      #3e8e41,
+      #3e8e41 20px,
+      #369639 20px,
+      #369639 40px
+    );
+    position: relative;
+    overflow: hidden;
+  }
 
-        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página Deportiva</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/833/833314.png" />
+  .balon-fondo {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/861/861512.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+  }
 
-  <!-- Estilos generales -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url('https://i.imgur.com/DrAT0br.jpg'); /* Césped sintético */
-      background-size: cover;
-      background-position: center;
-      color: white;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 0;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 3rem;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3rem;
-      color: #00ff00;
-      text-shadow: 0 0 10px #000;
-    }
-
-    p {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      color: #f0f0f0;
-    }
-
-    /* Balón animado */
-    .ball {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      background-image: url('https://cdn-icons-png.flaticon.com/512/356/356830.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      animation: flyBall 10s linear infinite;
-      z-index: 2;
-    }
-
-    .ball:nth-child(2) { top: 10%; animation-delay: 0s; }
-    .ball:nth-child(3) { top: 40%; animation-delay: 3s; }
-    .ball:nth-child(4) { top: 70%; animation-delay: 6s; }
-
-    @keyframes flyBall {
-      0% { left: -80px; transform: rotate(0deg); }
-      100% { left: 110%; transform: rotate(360deg); }
-    }
-
-    /* Reproductor oculto */
-    audio {
-      display: none;
-    }
-
-    .btn {
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background-color: #00ff00;
-      color: black;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #00cc00;
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay"></div>
-
-  <!-- Balones animados -->
-  <div class="ball"></div>
-  <div class="ball"></div>
-  <div class="ball"></div>
-
-  <!-- Contenido -->
-  <div class="content">
-    <h1>¡Bienvenido a la Pasión del Fútbol!</h1>
-    <p>Esta es una invitación llena de energía, goles y alegría. Prepárate para vivir la emoción del juego.</p>
-    <button class="btn" onclick="document.getElementById('audio').play()">🔊 ¡Activa el sonido!</button>
-  </div>
-
-  <!-- Sonido de graderío -->
-  <audio id="audio" autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/30/audio_81e1dcff12.mp3?filename=crowd-stadium-113172.mp3" type="audio/mpeg" />
-    Tu navegador no soporta audio.
-  </audio>
-</body>
-</html>
+  .balon-1 { top: 10%; left: 5%; }
+  .balon-2 { top: 40%; left: 20%; }
+  .balon-3 { top: 70%; left: 70%; }
+  .balon-4 { top: 25%; left: 80%; }
+  .balon-5 { top: 60%; left: 10%; }
+</style>
